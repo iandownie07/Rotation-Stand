@@ -90,7 +90,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint8_t index = 1;
+  uint8_t index = 1; // change index to select rotation frequency based on tab in configuration.h
   stepper_motor_init(&stepperMotor, &htim2, TIM_CHANNEL_1,GPIOC,GPIO_PIN_6);
   
   /* USER CODE END Init */
