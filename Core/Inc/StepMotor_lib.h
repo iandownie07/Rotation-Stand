@@ -37,8 +37,11 @@ typedef struct{
 void stepper_motor_init(m_cnfg_s *motor_conf, TIM_HandleTypeDef *tim_handle,
 		uint32_t tim_channel, GPIO_TypeDef *dir_portx, uint32_t dir_pin);
 
+void set_pwm_period_and_duty(m_cnfg_s *motor_conf, uint8_t index);
+
 void startMotor(m_cnfg_s* motor_conf, direction_e direction, int step);
 
 void stopMotor(m_cnfg_s *motor_conf);
+
 
 #endif /* INC_STEPMOTOR_LIB_H_ */
